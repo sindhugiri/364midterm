@@ -1,0 +1,16 @@
+{% block content %}
+
+This is the base template of an application that allows to view a twitter account's tweets, followers, friends
+
+{% endblock %}
+
+<p>------------</p>
+<h3>Navigation</h3>
+<ul>
+    <li><a href="{{ url_for('index')}}">Input form</a></li>
+    <li><a href="{{ url_for('accountassociated_tweets')}}">View tweets</a></li>
+    <li><a href="{{ url_for('account_followers')}}">View followers</a></li>
+    <li><a href="{{ url_for('account_friends')}}">View friends</a></li>
+</ul>
+
+

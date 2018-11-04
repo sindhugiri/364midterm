@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<ul>
+{% for tw in account_friends %}
+    <li>Friends:{{tw[0]}}<br> <i>Account:</i><strong>{{tw[1]}}</strong></li><br><br>
+{% endfor %}
+</ul>
+
+{% if not account_friends %}
+    There are no saved friends to show.
+{% endif %}
+
+
+<div>
+{% for message in get_flashed_messages() %}
+    <strong>*** {{ message }} ***</strong>
+{% endfor %}
+</div>
+
+{% endblock %}
